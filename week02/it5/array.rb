@@ -13,7 +13,7 @@
   "December"]
 
   def month_to_string(number)
-    puts @months[number - 1]
+    return @months[number - 1]
   end
 
   puts "Enter a number between 1 and 12:"
