@@ -11,7 +11,7 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
-  it('can add 1 and 4', function() {
+  it('can do additions', function() {
     calculator.numberClick(1);
     calculator.operatorClick('+');
     calculator.numberClick(4);
@@ -19,12 +19,20 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 5);
   })
 
-  it('can subtract 3 from 7', function() {
+  it('can do subtractions', function() {
     calculator.numberClick(7);
     calculator.operatorClick('-');
     calculator.numberClick(3);
     calculator.operatorClick('=')
     assert.strictEqual(calculator.runningTotal, 4);
+  })
+
+  it('can do multiplications', function() {
+    calculator.numberClick(3);
+    calculator.operatorClick('*');
+    calculator.numberClick(5);
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 15);
   })
 
 });
