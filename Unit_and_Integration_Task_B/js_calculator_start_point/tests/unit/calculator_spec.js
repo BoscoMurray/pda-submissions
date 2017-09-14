@@ -35,4 +35,12 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 15);
   })
 
+  it('can do division', function() {
+    calculator.numberClick(21);
+    calculator.operatorClick('/');
+    calculator.numberClick(7);
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 3);
+  })
+
 });
