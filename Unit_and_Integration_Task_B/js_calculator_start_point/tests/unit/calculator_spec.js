@@ -49,4 +49,20 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 25);
   })
 
+  it('can concatenate number clicks', function() {
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    assert.strictEqual(calculator.runningTotal, 25);
+  })
+
+  it('can change operator for each calculation', function() {
+    calculator.numberClick(21);
+    calculator.operatorClick('/');
+    calculator.numberClick(7);
+    calculator.operatorClick('+')
+    calculator.numberClick(2);
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 5);
+  })
+
 });
