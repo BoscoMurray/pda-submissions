@@ -43,4 +43,10 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 3);
   })
 
+  it('can concatenate number clicks', function() {
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    assert.strictEqual(calculator.runningTotal, 25);
+  })
+
 });
