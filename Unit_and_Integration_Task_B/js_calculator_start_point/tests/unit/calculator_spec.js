@@ -11,4 +11,12 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
+  it('can add 1 and 4', function() {
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.numberClick(4);
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 5);
+  })
+
 });
