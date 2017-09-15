@@ -60,6 +60,11 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 25);
   })
 
+  it('can save operator button click to previousOperator', function() {
+    calculator.operatorClick('+');
+    assert.equal(calculator.previousOperator, '+');
+  })
+
   it('can change operator for each calculation', function() {
     calculator.numberClick(21);
     calculator.operatorClick('/');
