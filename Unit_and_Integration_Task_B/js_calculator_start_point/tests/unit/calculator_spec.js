@@ -65,4 +65,16 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 5);
   })
 
+  it('can clr runningTotal but not previousTotal', function() {
+    calculator.numberClick(21);
+    calculator.operatorClick('/');
+    calculator.numberClick(7);
+    calculator.operatorClick('+')
+    calculator.numberClick(2);
+    calculator.clearClick();
+    calculator.numberClick(3);
+    calculator.operatorClick('=');
+    assert.strictEqual(calculator.runningTotal, 6);
+  })
+
 });
