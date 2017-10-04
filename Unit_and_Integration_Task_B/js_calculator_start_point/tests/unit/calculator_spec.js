@@ -87,4 +87,12 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 6);
   })
 
+  it('can set running total to zero if divide by zero', function() {
+    calculator.numberClick(21);
+    calculator.operatorClick('/');
+    calculator.numberClick(0);
+    calculator.operatorClick('=');
+    assert.strictEqual(calculator.runningTotal, 0);
+  })
+
 });
